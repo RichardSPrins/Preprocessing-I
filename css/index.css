@@ -160,6 +160,10 @@ table {
   .container nav {
     justify-content: center;
   }
+  .container nav a {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
 }
 .container a {
   margin-left: 40px;
