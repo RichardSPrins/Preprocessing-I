@@ -139,6 +139,11 @@ table {
 .container h1 {
   font-size: 4rem;
 }
+@media (max-width: 500px) {
+  .container h1 {
+    font-size: 1.5rem;
+  }
+}
 .container h2 {
   font-size: 1.5rem;
 }
@@ -151,13 +156,18 @@ table {
   justify-content: flex-end;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .container nav {
+    justify-content: center;
+  }
+}
 .container a {
   margin-left: 40px;
   text-decoration: none;
 }
 .container .top {
   width: 100%;
-  height: 700px;
+  height: 80%;
 }
 .container .top .banner {
   height: 100%;
@@ -167,9 +177,16 @@ table {
   background-color: rgba(90, 90, 90, 0.2);
 }
 .container .top .banner .profilePic img {
-  width: 450px;
-  height: 300px;
+  width: 35%;
+  height: 33%;
   margin-top: 50px;
+}
+@media (max-width: 500px) {
+  .container .top .banner .profilePic img {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+  }
 }
 .container .middle {
   display: flex;
@@ -193,6 +210,21 @@ table {
 .container .middle table tr td {
   vertical-align: middle;
 }
+@media (max-width: 500px) {
+  .container .middle {
+    flex-direction: column;
+  }
+  .container .middle article {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+  }
+  .container .middle article .skills {
+    width: 100%;
+  }
+}
 .container .bottom table {
   font-family: arial, sans-serif;
   width: 98%;
@@ -210,6 +242,11 @@ table {
 }
 .container .bottom tr:nth-child(even) {
   background-color: #ebebeb;
+}
+@media (max-width: 500px) {
+  .container .bottom {
+    text-align: center;
+  }
 }
 .container .copyright {
   text-align: center;

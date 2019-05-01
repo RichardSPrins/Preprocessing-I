@@ -140,10 +140,15 @@ table {
 	box-sizing: border-box;
 }
 
-.imgMixin () {
-	width: 450px;
-	height: 300px;
+.imgMixin() {
+	width: 35%;
+	height: 33%;
 	margin-top: 50px;
+}
+.imgMixinMobile() {
+	width: 90%;
+	height: 90%;
+	margin: auto;
 }
 
 .container {
@@ -155,6 +160,9 @@ table {
 	margin: 0 auto;
 	h1 {
 		font-size: 4rem;
+		@media(max-width: 500px) {
+			font-size: 1.5rem;
+		}
 	}
 	h2 {
 		font-size: 1.5rem;
@@ -170,7 +178,9 @@ table {
 		justify-content: flex-end;
 		align-items: center;
 		// background-color: lightgray;
-		
+		@media(max-width: 500px) {
+			justify-content: center;
+		}
 	}
 
 	a {
@@ -180,7 +190,7 @@ table {
 
 	.top {
 		width: 100%;
-		height: 700px;
+		height: 80%;
 
 		.banner {
 			height: 100%;
@@ -193,6 +203,9 @@ table {
 			.profilePic {
 				img {
 					.imgMixin();
+					@media(max-width: 500px) {
+						.imgMixinMobile()
+					}
 				}
 			}
 		}
@@ -219,6 +232,19 @@ table {
 				}
 			}
 		}
+		@media(max-width: 500px) {
+			flex-direction: column;
+			article {
+				display: flex;
+				flex-direction: column;
+				width: 90%;
+				text-align: center;
+				justify-content: center;
+				.skills {
+					width: 100%;
+				}
+			}
+		}
 	}
 	.bottom {
 		table {
@@ -241,6 +267,9 @@ table {
 		
 		tr:nth-child(even) {
 			background-color: #ebebeb;
+		}
+		@media(max-width: 500px) {
+			text-align: center;
 		}
 	}
 	.copyright {
