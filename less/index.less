@@ -140,7 +140,11 @@ table {
 	box-sizing: border-box;
 }
 
-
+.imgMixin () {
+	width: 450px;
+	height: 300px;
+	margin-top: 50px;
+}
 
 .container {
 	font-family: @font;
@@ -188,9 +192,7 @@ table {
 			background-color: rgba(90, 90, 90, 0.2);
 			.profilePic {
 				img {
-					width: 450px;
-					height: 300px;
-					margin-top: 50px;
+					.imgMixin();
 				}
 			}
 		}
